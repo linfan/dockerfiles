@@ -7,6 +7,3 @@ USER root
 # Fluentd plugins
 RUN gem install fluent-plugin-elasticsearch --no-rdoc --no-ri
 RUN gem install fluent-plugin-record-reformer --no-rdoc --no-ri
-
-# Configure file for collecting container logs
-ADD fluent.conf /etc/fluent/
