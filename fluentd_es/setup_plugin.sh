@@ -22,7 +22,7 @@ echo "
   logstash_format true
   flush_interval 5s
   include_tag_key true
-  tag_key docker
+  tag_key tag
 </match>" >> /fluentd/etc/fluent.conf
 
 touch /.plugin_setup
