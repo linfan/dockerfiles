@@ -28,7 +28,7 @@ docker run -d --name fluentd \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v /usr/bin/docker:/usr/bin/docker \
   -e ES_HOST=<es-container-host-ip> \
-  fluentd_es
+  fluentd_es:v0.12.21
 ```
 
 Start Kibana
