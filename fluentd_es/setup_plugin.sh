@@ -13,7 +13,7 @@ ES_INDEX=${ES_INDEX:-fluentd}
 ES_TYPE=${ES_TYPE:-fluentd}
 
 echo "
-<match docker.all>
+<match docker.**>
   type elasticsearch
   host $ES_HOST
   port $ES_PORT
@@ -21,8 +21,7 @@ echo "
   type_name $ES_TYPE
   logstash_format true
   flush_interval 5s
-  include_tag_key true
-  tag_key tag
+  include_tag_key false
 </match>" >> /fluentd/etc/fluent.conf
 
 touch /.plugin_setup
