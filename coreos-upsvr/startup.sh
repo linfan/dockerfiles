@@ -18,7 +18,7 @@ fi
 
 SIZE=$(stat -c %s ${BASE}/update.gz)
 SHA1_b64=$(echo -n "$(echo -n $(sha1sum ${BASE}/update.gz | awk '{print $1}') | sed -e 's/../\\x&/g')" | base64 )
-SHA256_b64=$(echo -n "$(echo -n $(sha256sum ${BASE}/update.gz | awk '{print $1}') | sed -e 's/../\\x&/g')" | base64)
+SHA256_b64=$(echo -ne "$(echo -n $(sha256sum ${BASE}/update.gz | awk '{print $1}') | sed -e 's/../\\x&/g')" | base64)
 
 XML="<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <response protocol=\"3.0\" server=\"update.core-os.net\">
