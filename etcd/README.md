@@ -15,3 +15,7 @@ $ docker run -i --rm --network host flin/etcd:v3.1.8 etcdctl set /hello world
 $ docker run -i --rm --network host flin/etcd:v3.1.8 etcdctl get /hello
 world
 ```
+
+## Refer
+
+Take a look at [this repo](https://github.com/appcelerator/docker-etcd), if you want have a more mature etcd cluster.
