@@ -1,5 +1,5 @@
 FROM openjdk:alpine
-ENV SONAR_SCANNER_VERSION 3.0.3.778
+ENV SONAR_SCANNER_VERSION 2.9.0.670
 
 RUN apk add --no-cache curl && \
         curl -sSLO https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip && \
